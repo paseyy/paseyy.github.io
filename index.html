@@ -8,11 +8,22 @@
 </head>
 <body>
   <nav>
-    <ul id="nav-tabs">
-      <li class="active" data-tab="about">About me</li>
-      <li data-tab="projects">Projects</li>
-      <li data-tab="work">Work</li>
-      <li data-tab="contact">Contact</li>
+    <div class="nav-left">
+      <div>Jakob Freiberger</div>
+      <div style="font-size:1rem; margin-left: 2rem; align-self: flex-end;">Computer Vision and Machine Learning Engineer</div>
+    </div>
+    <ul id="nav-tabs" class="nav-right">
+      <li id="nav-about" class="active" data-tab="about">About me</li>
+      <li class="dropdown">
+        <span class="dropdown-toggle" data-tab="projects">Projects</span>
+        <ul class="dropdown-menu">
+          <li id="nav-cv-ai" data-tab="projects-cv-ai">Computer Vision and AI</li>
+          <li id="nav-cg-gd" data-tab="projects-cg-gd">Graphics and Games</li>
+          <li id="nav-other" data-tab="projects-other">Other Projects</li>
+        </ul>
+      </li>
+      <li id="nav-work" data-tab="work">Work</li>
+      <li id="nav-contact" data-tab="contact">Contact</li>
     </ul>
   </nav>
 
@@ -20,7 +31,13 @@
     <div id="about" class="tab active" data-url="contents/about.html">
       <!-- About me content will be loaded here -->
     </div>
-    <div id="projects" class="tab" data-url="projects.html">
+    <div id="projects-cv-ai" class="tab" data-url="contents/projects-cv-ai.html">
+      <!-- Projects content will be loaded here -->
+    </div>
+    <div id="projects-cg-gd" class="tab" data-url="contents/projects-cg-gd.html">
+      <!-- Projects content will be loaded here -->
+    </div>
+    <div id="projects-other" class="tab" data-url="contents/projects-other.html">
       <!-- Projects content will be loaded here -->
     </div>
     <div id="work" class="tab" data-url="work.html">

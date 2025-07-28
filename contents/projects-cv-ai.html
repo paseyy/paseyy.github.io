@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects</title>
+</head>
+<body>
+  <h1>Computer Vision and AI Projects</h1>
+  <section class="project">
+    <h2 class="project-title">FitnessPose</h2>
+    <div class="image-grid">
+      <img src="media/fitnesspose-1.png" alt="Project 1 Image 1"/>
+      <img src="media/fitnesspose-2.png" alt="Project 1 Image 2"/>
+      <img src="media/fitnesspose-3.png" alt="Project 1 Image 3"/>
+      <img src="media/fitnesspose-4.png" alt="Project 1 Image 4"/>
+    </div>
+    <p class="description">
+      Launched during my semester abroad in Pohang, my team and I created a tool for identifying mistakes in workout form. We used a toolchain consisting of <a href="https://github.com/ViTAE-Transformer/ViTPose">ViTPose</a> and a slightly modified version of <a href="https://openaccess.thecvf.com/content/CVPR2022/html/Duan_Revisiting_Skeleton-Based_Action_Recognition_CVPR_2022_paper.html">PoseConv3D</a>. We trained and tested our approach on the <a href="https://github.com/ParitoshParmar/Fitness-AQA">Fitness-AQA dataset</a>, where we improve the baseline accuracy by about 7%. As of July 2025, our approach is still the state of the art on Fitness-AQA.
+    </p>
+    <a href="https://github.com/paseyy/FitnessPose" class="github-link" target="_blank" rel="noopener noreferrer">
+      FitnessPose on GitHub
+    </a>
+  </section>
+
+  <section class="project">
+    <h2 class="project-title">Rubik's Cube Solver</h2>
+    <img src="media/rubik-1.png" alt="Project 2 Image 1" class="soloimg" />
+    <img src="media/rubik-2.png" alt="Project 2 Image 2" class="soloimg" />
+    <p class="description">
+      We use traditional (= no machine learning) computer vision pipelines to detect and digitize a Rubik's Cube configuration. Afterwards, we use the <a href="https://github.com/hkociemba/RubiksCube-TwophaseSolver">Twophase solver</a> to find a solution for the cube and provide detailed instructions via a 3D user interface. We were surprised at the accuracy and speed with which the rule-based CV pipeline is able complete this task.
+    </p>
+  </section>
+</body>
+</html>

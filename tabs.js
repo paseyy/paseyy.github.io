@@ -1,4 +1,11 @@
-const tabs = document.querySelectorAll('#nav-tabs li');
+const tabs = [
+  document.getElementById('nav-about'),
+  document.getElementById('nav-cv-ai'),
+  document.getElementById('nav-cg-gd'),
+  document.getElementById('nav-other'),
+  document.getElementById('nav-work'),
+  document.getElementById('nav-contact')
+];
 const tabContents = document.querySelectorAll('.tab');
 
 // Load content from HTML file into each tab
@@ -18,5 +25,20 @@ tabs.forEach(tab => {
 
     tab.classList.add('active');
     document.getElementById(tab.dataset.tab).classList.add('active');
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const dropdown = dropdownToggle.closest(".dropdown");
+
+  dropdownToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle("open");
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", () => {
+    dropdown.classList.remove("open");
   });
 });
