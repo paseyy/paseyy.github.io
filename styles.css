@@ -36,7 +36,7 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 nav ul li {
@@ -44,7 +44,7 @@ nav ul li {
   cursor: pointer;
   padding: 0.5rem 1rem;  /* Added padding to make clickable area bigger */
   font-weight: 600;      /* Optional: make text a bit bolder */
-  font-size: 1.1rem;     /* Optional: slightly larger font */
+  font-size: 1.4rem;     /* Optional: slightly larger font */
 }
 
 nav ul li:hover,
@@ -64,4 +64,15 @@ nav ul li.active {
 
 .tab.active {
   display: block;
+}
+
+/* Ensure normal lists are vertical */
+.tab ul {
+  display: block;
+  padding-left: 2rem;  /* or adjust as needed */
+}
+
+.tab ul li {
+  display: list-item;
+  margin-bottom: 0.5rem;
 }
