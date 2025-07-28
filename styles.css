@@ -69,11 +69,11 @@ nav ul li.active {
 /* Ensure normal lists are vertical */
 .tab ul {
   display: block;
-  padding-left: 2rem;  /* or adjust as needed */
+  padding-left: 2rem;
   list-style-type: disc;
 }
 
-.tab ul li {
-  display: list-item;
+.tab li {
   margin-bottom: 0.5rem;
+  /* no need for display: list-item */
 }
