@@ -71,9 +71,13 @@ nav ul li.active {
   display: block;
   padding-left: 2rem;
   list-style-type: disc;
+  direction: ltr;             /* Force left-to-right text flow */
 }
 
 .tab li {
   margin-bottom: 0.5rem;
-  /* no need for display: list-item */
+  display: list-item;         /* Ensure list behaves normally */
+  white-space: normal;        /* Allow word wrapping */
+  width: auto;                /* Avoid shrinking into narrow boxes */
+  direction: ltr;             /* Reset direction in case it was RTL */
 }
