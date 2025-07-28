@@ -34,23 +34,21 @@ nav {
 }
 
 nav ul {
-  all: revert;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   list-style: none;
-  margin: 0;
   padding: 0;
-  justify-content: center;
+  margin: 0;
 }
 
 nav ul li {
-  all: revert;
+  display: inline-block;  /* Ensure element has a box */
+  padding: 0.5rem 1rem;    /* Add internal space */
   color: white;
-  cursor: pointer;
+  font-size: 1rem;
   font-weight: 600;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  list-style: none;
+  white-space: nowrap;    /* Optional: keeps text like 'About me' on one line */
+  cursor: pointer;
 }
 
 
