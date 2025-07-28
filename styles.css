@@ -21,6 +21,9 @@ ul li {
 
 h1 {
   margin-bottom: 1rem;
+  position: initial;
+  font-size: 3rem;
+  left: 0px;
 }
 
 h2 {
