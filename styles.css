@@ -34,9 +34,13 @@ nav {
 }
 
 nav ul {
-  list-style: none;
+  all: revert;
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
 }
 
 nav ul li {
