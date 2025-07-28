@@ -10,6 +10,18 @@ body {
   color: #333;
 }
 
+ul {
+  padding-left: 3rem;  /* Adjust this value for more or less indent */
+}
+
+ul li {
+  margin-bottom: 0.5rem; /* Optional: adds space between items */
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
 nav {
   background-color: #222;
   padding: 1rem;
@@ -24,12 +36,15 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 nav ul li {
   color: white;
   cursor: pointer;
+  padding: 0.5rem 1rem;  /* Added padding to make clickable area bigger */
+  font-weight: 600;      /* Optional: make text a bit bolder */
+  font-size: 1.1rem;     /* Optional: slightly larger font */
 }
 
 nav ul li:hover,
