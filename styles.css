@@ -44,12 +44,15 @@ nav ul {
 }
 
 nav ul li {
+  all: revert;
   color: white;
   cursor: pointer;
-  padding: 0.5rem 1rem;  /* Added padding to make clickable area bigger */
-  font-weight: 600;      /* Optional: make text a bit bolder */
-  font-size: 1.4rem;     /* Optional: slightly larger font */
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  list-style: none;
 }
+
 
 nav ul li:hover,
 nav ul li.active {
