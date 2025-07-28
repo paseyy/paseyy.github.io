@@ -70,6 +70,7 @@ nav ul li.active {
 .tab ul {
   display: block;
   padding-left: 2rem;  /* or adjust as needed */
+  list-style-type: disc;
 }
 
 .tab ul li {
