@@ -3,7 +3,6 @@ const tabs = [
   document.getElementById('nav-cv-ai'),
   document.getElementById('nav-cg-gd'),
   document.getElementById('nav-other'),
-  document.getElementById('nav-work'),
   document.getElementById('nav-contact')
 ];
 const tabContents = document.querySelectorAll('.tab');
@@ -22,6 +21,7 @@ tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     tabs.forEach(t => t.classList.remove('active'));
     tabContents.forEach(c => c.classList.remove('active'));
+    document.querySelector('.dropdown').classList.remove('active');
 
     tab.classList.add('active');
     
@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.classList.toggle("is-active");
     
     if (dropdown.classList.contains("open")) {
-      dropdownToggle.textContent = "\u25be Projects"
+      dropdownToggle.textContent = "\u25be Work"
     } else {
-      dropdownToggle.textContent = "\u25b8 Projects";
+      dropdownToggle.textContent = "\u25b8 Work";
     }
   });
   
@@ -62,16 +62,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update dropdown toggle text
     if (dropdown.classList.contains("open")) {
-      dropdownToggle.textContent = "\u25be Projects";
+      dropdownToggle.textContent = "\u25be Work";
     } else {
-      dropdownToggle.textContent = "\u25b8 Projects";
+      dropdownToggle.textContent = "\u25b8 Work";
     }
   });
 
   // Close dropdown when clicking outside
   document.addEventListener("click", () => {
     dropdown.classList.remove("open");
-    dropdownToggle.textContent = "\u25b8 Projects";
+    dropdownToggle.textContent = "\u25b8 Work";
   });
   
   // Close menu on tab click (mobile only)
