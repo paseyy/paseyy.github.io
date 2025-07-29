@@ -3,28 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer Portfolio</title>
+  <title>Jakob Freiberger - Home</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hamburgers.css">
 </head>
 <body>
   <nav>
     <div class="nav-left">
       <div>Jakob Freiberger</div>
+      <!--
       <div style="font-size:1rem; margin-left: 2rem; align-self: flex-end;">Computer Vision and Machine Learning Engineer</div>
+      -->
     </div>
-    <ul id="nav-tabs" class="nav-right">
-      <li id="nav-about" class="active" data-tab="about">About me</li>
-      <li class="dropdown">
-        <span class="dropdown-toggle" data-tab="projects">Projects</span>
-        <ul class="dropdown-menu">
-          <li id="nav-cv-ai" data-tab="projects-cv-ai">Computer Vision and AI</li>
-          <li id="nav-cg-gd" data-tab="projects-cg-gd">Graphics and Games</li>
-          <li id="nav-other" data-tab="projects-other">Other Projects</li>
-        </ul>
-      </li>
-      <li id="nav-work" data-tab="work">Work</li>
-      <li id="nav-contact" data-tab="contact">Contact</li>
-    </ul>
+    
+    <div class="nav-select">
+      <button class="hamburger hamburger--collapse" aria-label="Toggle menu" type="button"style="text-color: #ffffff;">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <ul id="nav-tabs" class="nav-right">
+        <li id="nav-about" class="active" data-tab="about">About me</li>
+        <li class="dropdown">
+          <span class="dropdown-toggle" data-tab="projects">Projects</span>
+          <ul class="dropdown-menu">
+            <li id="nav-cv-ai" data-tab="projects-cv-ai">Computer Vision and AI</li>
+            <li id="nav-cg-gd" data-tab="projects-cg-gd">Graphics and Games</li>
+            <li id="nav-other" data-tab="projects-other">Other Projects</li>
+          </ul>
+        </li>
+        <li id="nav-work" data-tab="work">Work</li>
+        <li id="nav-contact" data-tab="contact">Contact</li>
+      </ul>
+    </div>
   </nav>
 
   <div class="content">

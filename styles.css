@@ -23,7 +23,7 @@ h1 {
   margin-bottom: 1rem;
   position: initial;
   font-size: 3rem;
-  left: 0px;
+  left: auto !important;
 }
 
 h2 {
@@ -95,29 +95,20 @@ nav ul li.active {
   text-decoration: underline;
 }
 
-.content {
-  max-width: 800px;
-  margin: auto;
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.tab {
+/* Menu toggle button */
+.menu-toggle {
   display: none;
-}
-
-.tab.active {
-  display: block;
-}
-
-/* Ensure normal lists are vertical */
-.tab ul {
-  all: revert;
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.tab ul li {
-  all: revert;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .nav-left {
@@ -128,8 +119,14 @@ nav ul li.active {
   margin-left: 2rem;
 }
 
+.nav-select {
+  display: flex;
+  flex-direction: column;
+}
+
 .nav-right {
   display: flex;
+  justify-content: center;
   gap: 2rem;
   list-style: none;
   padding: 0;
@@ -189,6 +186,34 @@ nav ul li.active {
   display: block;
 }
 
+
+.content {
+  max-width: 800px;
+  padding: 0rem 1rem;
+  margin: 0 auto;
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+/* Ensure normal lists are vertical */
+.tab ul {
+  all: revert;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab ul li {
+  all: revert;
+  margin-bottom: 0.5rem;
+}
+
+
 .project {
   margin-bottom: 3rem;
   padding: 1rem;
@@ -242,4 +267,78 @@ nav ul li.active {
 }
 .github-link:hover {
   border-color: #0366d6;
+}
+
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  nav {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .menu-toggle {
+    display: block;
+    color: #ffffff;
+    margin-right: 0rem;
+  }
+
+  .nav-left {
+    font-size: 1.3rem;
+    margin-left: 0rem;
+  }
+
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    overflow: visible;
+  }
+  
+  .nav-right li {
+    padding: 0;
+  }
+
+  nav.open .nav-right {
+    display: flex;
+  }
+  
+  nav.open .menu-toggle {
+    margin-right: 0rem;
+    text-align: right;
+    padding-right: 0rem;;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;      /* enable absolute positioning */
+    top: 100%;               /* place below the dropdown toggle */
+    right: 0;                /* align right edge to the container */
+    left: auto;
+    background-color: #112244;
+    border: 1px solid #444;
+    padding: 0.5rem 0;
+    list-style: none;
+    margin: 0;
+    z-index: 10;
+    pointer-events: auto;
+  }
+  
+  .dropdown.open {
+    display: flex;
+    align-items: right;
+  }
+  
+  .dropdown-menu li {
+    font-size: 1rem;
+    margin: 0.5rem 1rem;
+  }
 }
