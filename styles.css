@@ -64,6 +64,7 @@ nav {
   padding: 2rem 2rem;
   background-color: #112244;
   margin-bottom: 2rem;
+  z-index: 1000;
 }
 
 nav ul {
@@ -268,9 +269,19 @@ nav ul li.active span {
 
 
 @media (max-width: 768px) {
+  body, .content {
+    overflow: visible;
+  }
+  
+  h1 {
+    font-size: 1.5rem !important;
+    width: 100% !important;
+  }
+  
   nav {
     flex-direction: row;
     align-items: flex-start;
+    align-self: flex-start;
   }
 
   .nav-left {
