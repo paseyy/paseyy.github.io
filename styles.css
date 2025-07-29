@@ -12,11 +12,12 @@ body {
 }
 
 ul {
-  padding-left: 3rem;  /* Adjust this value for more or less indent */
+  padding-left: 1rem;
+  margin-left: 5rem;
 }
 
 ul li {
-  margin-bottom: 0.5rem; /* Optional: adds space between items */
+  margin-bottom: 0.5rem;
 }
 
 h1 {
@@ -91,7 +92,11 @@ nav ul li {
 
 
 nav ul li:hover,
-nav ul li.active {
+nav ul li.active{
+  text-decoration: underline;
+}
+
+nav ul li.active span {
   text-decoration: underline;
 }
 
@@ -100,15 +105,6 @@ nav ul li.active {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-/* Menu toggle button */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
 .nav-left {
@@ -204,7 +200,8 @@ nav ul li.active {
 /* Ensure normal lists are vertical */
 .tab ul {
   all: revert;
-  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  margin-left: 0rem;
   margin-bottom: 1.5rem;
 }
 
@@ -270,21 +267,10 @@ nav ul li.active {
 }
 
 
-/* For mobile devices */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-  
   nav {
     flex-direction: row;
     align-items: flex-start;
-  }
-  
-  .menu-toggle {
-    display: block;
-    color: #ffffff;
-    margin-right: 0rem;
   }
 
   .nav-left {
@@ -292,53 +278,83 @@ nav ul li.active {
     margin-left: 0rem;
   }
 
+  .menu-toggle {
+    display: block;
+    color: #ffffff;
+    margin-left: auto;
+  }
+
+  /* Main navigation list container */
   .nav-right {
     display: none;
     flex-direction: column;
+    align-items: flex-end; /* Align all nav items to the right */
     width: 100%;
+    max-width: 100%;
+    list-style: none;
     padding: 1rem 0;
+    margin: 0;
     overflow: visible;
-  }
-  
-  .nav-right li {
-    padding: 0;
+    position: relative; /* Establishes a context, good practice */
   }
 
   nav.open .nav-right {
     display: flex;
   }
-  
-  nav.open .menu-toggle {
-    margin-right: 0rem;
+
+  /* Style all navigation items for consistency */
+  .nav-right > li {
     text-align: right;
-    padding-right: 0rem;;
+    width: auto;
+    padding: 0rem 0rem;
   }
-  
+
+  /* The parent of the dropdown menu */
   .dropdown {
-    position: relative;
+    position: relative; /* ✅ CRITICAL: This is the positioning anchor for the menu. */
+    overflow: visible;
+    display: inline-block;
   }
   
+  .dropdown-toggle {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* The dropdown menu itself */
   .dropdown-menu {
-    position: absolute;      /* enable absolute positioning */
-    top: 100%;               /* place below the dropdown toggle */
-    right: 0;                /* align right edge to the container */
-    left: auto;
+    display: none;
+    position: absolute;
+    top: 120%;  /* Places it directly below the toggle */
+    left:auto;
+    right: 0;    /* Aligns left edge with the toggle */
+    z-index: 999;
+    
     background-color: #112244;
-    border: 1px solid #444;
+    border: 1px solid #ffffff;
     padding: 0.5rem 0;
     list-style: none;
     margin: 0;
-    z-index: 10;
-    pointer-events: auto;
-  }
-  
-  .dropdown.open {
-    display: flex;
+    min-width: 180px;
     align-items: right;
   }
-  
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
   .dropdown-menu li {
+    padding: 0.5rem 1rem;
+    color: white;
     font-size: 1rem;
-    margin: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+
+  .dropdown-menu li:hover {
+    background-color: #223355;
   }
 }
+

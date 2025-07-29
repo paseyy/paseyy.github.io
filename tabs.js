@@ -24,6 +24,12 @@ tabs.forEach(tab => {
     tabContents.forEach(c => c.classList.remove('active'));
 
     tab.classList.add('active');
+    
+    // make "Projects" active
+    if (tab.id == "nav-cv-ai" || tab.id == "nav-cg-gd" || tab.id == "nav-other") {
+      document.querySelector('.dropdown').classList.add('active');
+    }
+    
     document.getElementById(tab.dataset.tab).classList.add('active');
     
     // Close the menu on mobile
@@ -56,9 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update dropdown toggle text
     if (dropdown.classList.contains("open")) {
-      dropdownToggle.textContent = "Projects (open)";
+      dropdownToggle.textContent = "\u25be Projects";
     } else {
-      dropdownToggle.textContent = "Projects";
+      dropdownToggle.textContent = "\u25b8 Projects";
     }
   });
 

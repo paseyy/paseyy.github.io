@@ -6,8 +6,17 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
+ 
+.hamburger {
   padding: 0;
-  display: inline-block;
   cursor: pointer;
   text-align: right;
   transition-property: opacity, filter;
